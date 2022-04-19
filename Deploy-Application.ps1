@@ -22,13 +22,13 @@
 .PARAMETER DisableLogging
 	Disables logging to file for the script. Default is: $false.
 .EXAMPLE
-    powershell.exe -Command "& { & '.\Deploy-Application.ps1' -DeployMode 'Silent'; Exit $LastExitCode }"
+	powershell.exe -Command "& { & '.\Deploy-Application.ps1' -DeployMode 'Silent'; Exit $LastExitCode }"
 .EXAMPLE
-    powershell.exe -Command "& { & '.\Deploy-Application.ps1' -AllowRebootPassThru; Exit $LastExitCode }"
+	powershell.exe -Command "& { & '.\Deploy-Application.ps1' -AllowRebootPassThru; Exit $LastExitCode }"
 .EXAMPLE
-    powershell.exe -Command "& { & '.\Deploy-Application.ps1' -DeploymentType 'Uninstall'; Exit $LastExitCode }"
+	powershell.exe -Command "& { & '.\Deploy-Application.ps1' -DeploymentType 'Uninstall'; Exit $LastExitCode }"
 .EXAMPLE
-    Deploy-Application.exe -DeploymentType "Install" -DeployMode "Silent"
+	Deploy-Application.exe -DeploymentType "Install" -DeployMode "Silent"
 .NOTES
 	Toolkit Exit Code Ranges:
 	60000 - 68999: Reserved for built-in exit codes in Deploy-Application.ps1, Deploy-Application.exe, and AppDeployToolkitMain.ps1
@@ -192,8 +192,7 @@ Try {
 		}
 
 		## <Perform Installation tasks here>
-		If($installStatus.DisplayVersion -eq "25.0.0.3002" -or $installStatus.DisplayVersion -eq "25.0.0.3011" -or $installStatus.DisplayVersion -eq "25.0.0.4013" -or $installStatus.DisplayVersion -eq "25.0.0.5005")
-		{
+		If($installStatus.DisplayVersion -eq "25.0.0.3002" -or $installStatus.DisplayVersion -eq "25.0.0.3011" -or $installStatus.DisplayVersion -eq "25.0.0.4013" -or $installStatus.DisplayVersion -eq "25.0.0.5005") {
 			$appVersion = $installStatus.DisplayVersion
 			Write-Log -Message "Currently Installed Version: $appVersion" -Source 'Installation' -LogType 'CMTrace'
 			Write-Log -Message "Installing Patch..." -Source 'Installation' -LogType 'CMTrace'
@@ -300,8 +299,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUPZlbeusElh7WD2Jj4v9+EsFU
-# aa6gghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUWBKPAdfzbVVt0ztQzjwFcsoU
+# k6ugghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -401,13 +400,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFLlqaOt1XegznJPvXEUgMXgqs+ccMA0GCSqGSIb3DQEBAQUABIIBgJKLzwC8
-# RKbgi8gqPXAa6fH2WHPlKWs4qwsuaEjGdLWVOSaL7I20kHrYKKD6LCn4XavKjYQB
-# D9mYRNXUNKB3385Uzc3L/ij0qdH2GKjPw46XAHnzZtZO/zU1lv6LFvZce4bGA5da
-# TOvC/Ov+tdyCmF+L6N8ie1gY1RPUgVYbT2A3alTEG+/Z1yvdduiA22X5ctq8RSwh
-# vyn8vRJK1UJwHikXP23UTExPWK0qnue89rXqDC1fRVodKJQFMHGXZA5H4anc3cyl
-# i/iJuG+Q5VRX3VTBD3PRMsvVbCqX2K54DNAovddzS0VW18ztMt3cL86k2GMSMtGH
-# nXAE+aw/npe1QlNzlsAVAFhOYD+TIQNg3+cTZQZMt/HA3RjSol0gOWtiPHBi0FuW
-# LqFBzkX7Fkjigj9RPq6V6Acazeg9yazgUlw0MWd0/0KYBy+9CmgHI8y8EIw32goG
-# T4WJAnLC4NR+701MHAxkV6hyRvFu57wO/b7iOy0OYAw6sBVHmhMca44BVw==
+# MRYEFH0OyKCd1Gu4zDRBiQq8eU50qEqEMA0GCSqGSIb3DQEBAQUABIIBgE5tq3Zn
+# EVKY+FCVpdOwVhay5Bq56Wm4ynHVQKzQb+9pDRf8BDGWHe88EBc8c3pt9N/j72uR
+# Vg82hJ16lmF7rbmzUT083oX02s4gK4tqDYNRW3A3Muw5rol76/czLpq2TrF1kAqv
+# xXG4hJH0sNOFqG2myl8GyxptWxMIzgX2bpiAowGBXLDGEKohdZj8B7wmUBwnH1FR
+# Q0WpJcdkqAQftaTnFOign5o9SoyiRLksrwxmG859g/jnkc/3NX1AslO8pjfoU7NV
+# xsd7AMSFO2fPnDdf0lm+RV3PgtlDEeePsYVf5z2SQ7x0L4M3fo3Ttexbjapdtl6c
+# 3+ICxTnw40tuUh+xJ7UZZOmjY1dFe4IzQk3WHGGYbePtBaAKUZ/HviHtimR7oD4O
+# uOvE7a3PGKQypN3rbp6H6rx3Lmi8daDJMod1sETacQz0ZwzJjY2aZFiQHrUSTm5v
+# hxZIVjPE+ULNb5/v628mwHtG5ZnUS/uz4h3/y6mM9Nf+iAmQJ1RDdFHJrw==
 # SIG # End signature block
