@@ -200,7 +200,6 @@ Try {
 			$exitCode = Execute-Process -Path "$dirFiles\ARCHICAD-25-USA-Update-5010-1.1-INTEL.exe" -Parameters "--mode unattended" ## -WindowStyle "Hidden"
 			If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }			
 		}
-
 		##*===============================================
 		##* POST-INSTALLATION
 		##*===============================================
@@ -282,7 +281,7 @@ Try {
 		## <Perform Post-Repair tasks here>
 
 
-    }
+	}
 	##*===============================================
 	##* END SCRIPT BODY
 	##*===============================================
@@ -301,8 +300,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUaEnf8J82BsAuE53U6IIStJrq
-# RUGgghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUPZlbeusElh7WD2Jj4v9+EsFU
+# aa6gghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -402,13 +401,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFDeqP/AVVgf7E5o0FdNaKWFdxDVzMA0GCSqGSIb3DQEBAQUABIIBgBgGnqKo
-# KVlJi+W9/MKZ9Bo7dBKw0tQuTPIWcabE7ablTC+hdEnHROg2UX9l6Gmyqraica4f
-# 0oOecy1fZrGc6uugVwkpKCZJwkjY4bLCyn5/5OlJMLC17Ns/YsghL6wCiUM0qHqv
-# pJvmSwE0Psh2VTl55Nad0iXMQcf7mqwqtQnBvKUWzvrZ3ULEJwf/I1hykjAXIVwu
-# x7+UjJFP+VTbXjibuXxwHSbEQqP9q0r92z8FcqgNsp5uqcsClBnH+osI/Sz8mthw
-# p3/rCCRup8nhw95Rzhfy9/onnJ459Ac+i91DIbHmacwmk1PkOcxzoUMuD7bsv4Sb
-# Fl/JtukflDOsJ0HQNMLxKy/RbpILnPUciHtj8yXvEzWAOI6fyRyMjHYCBHtCzA5+
-# n5Fwa0Fz9yBLNIfzztkj4DoYiuRHSeFDZziNhpyUoX1bhPK+QHxnaGMmHMvfssUU
-# NoAtBja9s4ED4nhzwY7qmp4IGzfzv9Yy8hxwHXFFgiwe9UMZEr37FwurwQ==
+# MRYEFLlqaOt1XegznJPvXEUgMXgqs+ccMA0GCSqGSIb3DQEBAQUABIIBgJKLzwC8
+# RKbgi8gqPXAa6fH2WHPlKWs4qwsuaEjGdLWVOSaL7I20kHrYKKD6LCn4XavKjYQB
+# D9mYRNXUNKB3385Uzc3L/ij0qdH2GKjPw46XAHnzZtZO/zU1lv6LFvZce4bGA5da
+# TOvC/Ov+tdyCmF+L6N8ie1gY1RPUgVYbT2A3alTEG+/Z1yvdduiA22X5ctq8RSwh
+# vyn8vRJK1UJwHikXP23UTExPWK0qnue89rXqDC1fRVodKJQFMHGXZA5H4anc3cyl
+# i/iJuG+Q5VRX3VTBD3PRMsvVbCqX2K54DNAovddzS0VW18ztMt3cL86k2GMSMtGH
+# nXAE+aw/npe1QlNzlsAVAFhOYD+TIQNg3+cTZQZMt/HA3RjSol0gOWtiPHBi0FuW
+# LqFBzkX7Fkjigj9RPq6V6Acazeg9yazgUlw0MWd0/0KYBy+9CmgHI8y8EIw32goG
+# T4WJAnLC4NR+701MHAxkV6hyRvFu57wO/b7iOy0OYAw6sBVHmhMca44BVw==
 # SIG # End signature block
