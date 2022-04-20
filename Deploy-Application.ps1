@@ -121,7 +121,7 @@ Try {
 		[string]$installPhase = 'Pre-Installation'
 
 		## Show Welcome Message, close ArchiCAD if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-		Show-InstallationWelcome -CloseApps 'ARCHICAD' -CheckDiskSpace -PersistPrompt -AllowDefer -DeferTimes 3
+		Show-InstallationWelcome -CloseApps 'ARCHICAD,ARCHICAD Starter' -CheckDiskSpace -PersistPrompt -AllowDefer -DeferTimes 3
 
 		## Show Progress Message (with the default message)
 		Show-InstallationProgress
@@ -207,7 +207,7 @@ Try {
 		## <Perform Post-Installation tasks here>
 
 		## Display a message at the end of the install
-		If (-not $useDefaultMsi) { Show-InstallationPrompt -Message 'You can customize text to appear at the end of an install or remove it completely for unattended installations.' -ButtonRightText 'OK' -Icon Information -NoWait }
+		If (-not $useDefaultMsi) { Show-InstallationPrompt -Message 'ArchiCAD is now up-to-date.' -ButtonRightText 'OK' -Icon Information -NoWait }
 	}
 	ElseIf ($deploymentType -ieq 'Uninstall')
 	{
@@ -299,8 +299,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUWBKPAdfzbVVt0ztQzjwFcsoU
-# k6ugghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQU8Yu4Yh2Wm6zNmIpQIZE/wQEY
+# rtGgghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -400,13 +400,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFH0OyKCd1Gu4zDRBiQq8eU50qEqEMA0GCSqGSIb3DQEBAQUABIIBgE5tq3Zn
-# EVKY+FCVpdOwVhay5Bq56Wm4ynHVQKzQb+9pDRf8BDGWHe88EBc8c3pt9N/j72uR
-# Vg82hJ16lmF7rbmzUT083oX02s4gK4tqDYNRW3A3Muw5rol76/czLpq2TrF1kAqv
-# xXG4hJH0sNOFqG2myl8GyxptWxMIzgX2bpiAowGBXLDGEKohdZj8B7wmUBwnH1FR
-# Q0WpJcdkqAQftaTnFOign5o9SoyiRLksrwxmG859g/jnkc/3NX1AslO8pjfoU7NV
-# xsd7AMSFO2fPnDdf0lm+RV3PgtlDEeePsYVf5z2SQ7x0L4M3fo3Ttexbjapdtl6c
-# 3+ICxTnw40tuUh+xJ7UZZOmjY1dFe4IzQk3WHGGYbePtBaAKUZ/HviHtimR7oD4O
-# uOvE7a3PGKQypN3rbp6H6rx3Lmi8daDJMod1sETacQz0ZwzJjY2aZFiQHrUSTm5v
-# hxZIVjPE+ULNb5/v628mwHtG5ZnUS/uz4h3/y6mM9Nf+iAmQJ1RDdFHJrw==
+# MRYEFAqLPp1CxmCvGWSCbNymavtBWIyPMA0GCSqGSIb3DQEBAQUABIIBgJ8QB64Y
+# +IQvVUm+U54AUdkt4QUxJ/Q/AL4ipg+OJJivz7am+1vO6J1g7/INSxJNRR2Edwqk
+# /C0sVZQP8sAmMQEY6JCbl2ijsXhrdDmCQQH8Fx6LtqeqWfLJgyeRPSijpVW8SikM
+# naafpKowvxZrJ5MgV7qcP9Hsa7bDVYHlHFZ4d372WxdjE7qvQfvE+rhZemMR4b8r
+# hOddp/3WgJbgboyAMaDPOukYfhTm2w39z2M5VVmTSMAyiuR+ANqEd4QlfqpgOyYV
+# Seyhu/STPIUpEa2FKvsWCRcBW0QHNzumu745KVHJA7n9A5LsvfrZawEhrAg7/CAI
+# GesfmBfy2O5jT3J4V2symOK1093LJgtv+B5bXqvJc/rcHflQocJckejtLOJkk5no
+# nZVOFTa8AZh0r+674x9CtrcXXF7HfxHUjiIOg7mJ0pm/MQ4DxSpLgVv8Yuw6QDbc
+# j/1cr/do2UTdq1xzLGwGGvq1UugSWJpiqB6WICDfkkSI3OpIo5uw6q5zSw==
 # SIG # End signature block
