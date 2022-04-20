@@ -144,7 +144,7 @@ Try {
 					$licenseFile = Test-Path -Path "C:\ProgramData\ARCHICAD\AC_25_USA\education.lic"	## Should evaluate false
 					$licenseArchive = Test-Path -Path "C:\ProgramData\ARCHICAD\AC_25_USA\education.bak"	## Should evaluate true
 					If ((!$licenseFile) -and ($licenseArchive)) {
-						Write-Log -Message "Old license successfully archived." -Source 'Pre-Installation' -LogType 'CMTrace'	
+						Write-Log -Message "Old license successfully archived." -Source 'Pre-Installation' -LogType 'CMTrace'
 					}
 				}
 				$licenseFile = Test-Path -Path "C:\ProgramData\ARCHICAD\AC_25_USA\education.lic"	## Should evaluate false
@@ -153,7 +153,7 @@ Try {
 					Copy-Item "$dirSupportFiles\education.lic" -Destination "C:\ProgramData\ARCHICAD\AC_25_USA"
 					If (Test-Path -Path "C:\ProgramData\ARCHICAD\AC_25_USA\education.lic"){
 						Write-Log -Message "Import successful" -Source 'Pre-Installation' -LogType 'CMTrace'
-					}	
+					}
 					Else {
 						Write-Log -Message "Import failed" -Source 'Pre-Installation' -LogType 'CMTrace'
 					}
@@ -167,7 +167,7 @@ Try {
 				Copy-Item "$dirSupportFiles\education.lic" -Destination "C:\ProgramData\ARCHICAD\AC_25_USA"
 				If (Test-Path -Path "C:\ProgramData\ARCHICAD\AC_25_USA\education.lic"){
 					Write-Log -Message "Import successful" -Source 'Pre-Installation' -LogType 'CMTrace'
-				}	
+				}
 				Else {
 					Write-Log -Message "Import failed" -Source 'Pre-Installation' -LogType 'CMTrace'
 				}
@@ -176,7 +176,7 @@ Try {
 		Else {
 			Write-Log -Message "ArchiCAD does not appear to be installed." -Source 'Pre-Installation' -LogType 'CMTrace'
 		}
-			
+
 		Write-Log -Message "Waiting 5 seconds before proceeding..." -Source 'Pre-Installation' -LogType 'CMTrace'
 		Start-Sleep -s 5
 
@@ -197,7 +197,7 @@ Try {
 			Write-Log -Message "Currently Installed Version: $appVersion" -Source 'Installation' -LogType 'CMTrace'
 			Write-Log -Message "Installing Patch..." -Source 'Installation' -LogType 'CMTrace'
 			$exitCode = Execute-Process -Path "$dirFiles\ARCHICAD-25-USA-Update-5010-1.1-INTEL.exe" -Parameters "--mode unattended" ## -WindowStyle "Hidden"
-			If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }			
+			If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 		}
 		##*===============================================
 		##* POST-INSTALLATION
